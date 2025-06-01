@@ -4,8 +4,8 @@ import { Avatar, Box, Flex, Heading, Menu, Portal } from "@chakra-ui/react";
 const Navbar = () => {
   return (
     <Box>
-      <Flex justify="space-between" mx={marginX} my="1rem">
-        <Heading>TechWithTwin</Heading>
+      <Flex justify="space-between" mx={marginX} py="1rem">
+        <Heading color="white">TechWithTwin.</Heading>
         <Menu.Root>
           <Menu.Trigger>
             <Avatar.Root>
