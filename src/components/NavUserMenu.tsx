@@ -1,15 +1,20 @@
-import type { User } from "@/App";
+import { useUser } from "@/hooks/useUser";
 import { Avatar, Button, Menu, Portal } from "@chakra-ui/react";
 
-interface Props {
-  user: User | null;
-  login: () => void;
-}
-
-const NavUserMenu = ({ user, login }: Props) => {
+const NavUserMenu = () => {
+  const { user, login } = useUser();
   if (!user) {
     return (
-      <Button colorPalette="green" onClick={() => login()}>
+      <Button
+        colorPalette="green"
+        onClick={() =>
+          login({
+            username: "TechWithTwin",
+            role: "ADMIN",
+            profile: "https://avatars.githubusercontent.com/u/140457665?v=4",
+          })
+        }
+      >
         Login
       </Button>
     );
